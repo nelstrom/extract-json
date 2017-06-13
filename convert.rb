@@ -26,6 +26,7 @@ class YearConverter
 end
 
 options = {
+  :remove_empty_values => false,
   :value_converters => {
     :year => YearConverter
   }
