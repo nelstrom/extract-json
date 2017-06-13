@@ -29,7 +29,8 @@ options = {
   :remove_empty_values => false,
   :key_mapping => {
     :entity => :title,
-    :story => :text
+    :story => :text,
+    :records_lost => nil
   },
   :value_converters => {
     :year => YearConverter
