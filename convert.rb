@@ -27,6 +27,10 @@ end
 
 options = {
   :remove_empty_values => false,
+  :key_mapping => {
+    :entity => :title,
+    :story => :text
+  },
   :value_converters => {
     :year => YearConverter
   }
