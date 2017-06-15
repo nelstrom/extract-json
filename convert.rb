@@ -37,10 +37,14 @@ options = {
   }
 }
 
+index = 0
 records = SmarterCSV.process('./2017-data-breaches.csv', options)
-records.each_with_index do |record, index|
-  filename = (index+1).to_s.rjust(3, "0")
-  File.open("data/#{filename}.json", 'a') do |w|
-    w.puts JSON.pretty_generate(record)
+records.each do |record|
+  unless record[:text].to_s.strip.empty?
+    index += 1
+    filename = (index).to_s.rjust(3, "0")
+    File.open("data/#{filename}.json", 'a') do |w|
+      w.puts JSON.pretty_generate(record)
+    end
   end
 end
