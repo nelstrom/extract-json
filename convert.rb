@@ -29,6 +29,9 @@ options = {
   :key_mapping => {
     :entity => :title,
     :story => :text,
+    :'1st_source_link' => :source_link,
+    :'2nd_source_link' => nil,
+    :'3rd_source' => nil,
     :records_lost => nil
   },
   :value_converters => {
