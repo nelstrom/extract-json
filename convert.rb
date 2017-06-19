@@ -24,6 +24,12 @@ class YearConverter
   end
 end
 
+class SourceConverter
+  def self.convert(value)
+    value.split(/,|;/).first
+  end
+end
+
 options = {
   :remove_empty_values => false,
   :key_mapping => {
@@ -35,7 +41,8 @@ options = {
     :records_lost => nil
   },
   :value_converters => {
-    :year => YearConverter
+    :year => YearConverter,
+    :source_name => SourceConverter
   }
 }
 
