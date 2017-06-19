@@ -4,17 +4,16 @@ FileUtils.mkdir_p('data')
 FileUtils.rm_rf(Dir.glob('data/*'))
 
 class YearConverter
-  # Years are encoded
-  # 0  = 2004
-  # 8  = 2012
-  # 9  = 2013
-  # 10 = 2014
-  # 11 = 2015
-  # 12 = 2016
-  # 13 = latest
   def self.convert(value)
     {
       0  => '2004',
+      1  => '2005',
+      2  => '2006',
+      3  => '2007',
+      4  => '2008',
+      5  => '2009',
+      6  => '2010',
+      7  => '2011',
       8  => '2012',
       9  => '2013',
       10 => '2014',
