@@ -1,7 +1,5 @@
 require 'smarter_csv'
 require 'json'
-FileUtils.mkdir_p('data')
-FileUtils.rm_rf(Dir.glob('data/*'))
 
 class YearConverter
   def self.convert(value)
@@ -46,6 +44,8 @@ options = {
   }
 }
 
+FileUtils.mkdir_p('data')
+FileUtils.rm_rf(Dir.glob('data/*'))
 index = 0
 records = SmarterCSV.process('./2017-data-breaches.csv', options)
 records.each do |record|
